@@ -8,7 +8,7 @@ class ScrubTest extends TestCase
 {
     use DatabaseTransactions;
 
-    public function testThatDesiredUserDataGetsScrubbed()
+    public function testThatDesiredUserDataGetsScrubbed(): void
     {
         $this->addConfig();
         $this->addUser([
@@ -36,7 +36,7 @@ class ScrubTest extends TestCase
         $this->assertNotEquals('cosmo@kramerica.com', $user2->email);
     }
 
-    public function testThatFormattersCanBeAnInvokableClass()
+    public function testThatFormattersCanBeAnInvokableClass(): void
     {
         $formatter = new class ()
         {
@@ -67,7 +67,7 @@ class ScrubTest extends TestCase
         $this->assertEquals('Foo', $user1->first_name);
     }
 
-    public function testThatFormattersCanBeAnInvokableClassString()
+    public function testThatFormattersCanBeAnInvokableClassString(): void
     {
         $formatter = new class ()
         {
@@ -98,7 +98,7 @@ class ScrubTest extends TestCase
         $this->assertEquals('Foo', $user1->first_name);
     }
 
-    public function testThatArgumentsCanBePassedToFormatters()
+    public function testThatArgumentsCanBePassedToFormatters(): void
     {
         $this->app->config['carwash'] = [
             'users' => [
@@ -119,7 +119,7 @@ class ScrubTest extends TestCase
         $this->assertEquals(3, str_word_count($user1->first_name));
     }
 
-    public function testThatTheTableConfigurationCanBeAnInvokableClass()
+    public function testThatTheTableConfigurationCanBeAnInvokableClass(): void
     {
         $user = [
             'id' => 1,
@@ -163,7 +163,7 @@ class ScrubTest extends TestCase
         $this->assertEquals('Foo', $user1->first_name);
     }
 
-    public function testThatTheTableConfigurationCanBeAnInvokableClassString()
+    public function testThatTheTableConfigurationCanBeAnInvokableClassString(): void
     {
         $user = [
             'id' => 1,
@@ -200,7 +200,7 @@ class ScrubTest extends TestCase
         $this->assertEquals('Foo', $user1->first_name);
     }
 
-    public function testThatTheTableConfigurationCanBeAnAnonymousFunction()
+    public function testThatTheTableConfigurationCanBeAnAnonymousFunction(): void
     {
         $user = [
             'id' => 1,

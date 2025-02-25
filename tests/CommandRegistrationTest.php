@@ -9,7 +9,7 @@ class CommandRegistrationTest extends TestCase
         'carwash:scrub'
     ];
 
-    public function testThatAllComandsGetRegisteredWithTheApplication()
+    public function testThatAllComandsGetRegisteredWithTheApplication(): void
     {
         $registeredCommands = collect(\Artisan::all())->keys();
 
