@@ -2,7 +2,7 @@
 
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 
-class CommandRegistrationTest extends TestCase
+final class CommandRegistrationTest extends TestCase
 {
     use DatabaseTransactions;
     const CARWASH_COMMANDS = [

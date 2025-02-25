@@ -4,7 +4,7 @@ use Faker\Generator;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 use PHPUnit\Framework\Assert;
 
-class ScrubTest extends TestCase
+final class ScrubTest extends TestCase
 {
     use DatabaseTransactions;
 
